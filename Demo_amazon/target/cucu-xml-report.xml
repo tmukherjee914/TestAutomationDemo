@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="30.76537">
+<testcase classname="Amazon Login" name="Veriy title" time="3.137612">
+<failure message="org.assertj.core.api.SoftAssertionError: &#10;The following assertion failed:&#10;1) &#10;Expecting:&#10; &lt;&quot;Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in&quot;&gt;&#10;to be equal to:&#10; &lt;&quot;11Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in&quot;&gt;&#10;ignoring case considerations&#10;at LoginStepDefinitions.Verify_page_title(LoginStepDefinitions.java:37)&#10;&#10;&#9;at org.assertj.core.api.SoftAssertions.assertAll(SoftAssertions.java:158)&#10;&#9;at com.amazon.stepdefinitions.LoginStepDefinitions.Verify_page_title(LoginStepDefinitions.java:40)&#10;&#9;at ✽.Then Verify page title(/Users/test/Desktop/WPOS_Automation/Demo_amazon/src/test/resources/Features/LoginAmaz.feature:8)&#10;"><![CDATA[When The user is on the home page...........................................passed
+Then Verify page title......................................................failed
+
+StackTrace:
+org.assertj.core.api.SoftAssertionError: 
+The following assertion failed:
+1) 
+Expecting:
+ <"Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in">
+to be equal to:
+ <"11Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in">
+ignoring case considerations
+at LoginStepDefinitions.Verify_page_title(LoginStepDefinitions.java:37)
+
+	at org.assertj.core.api.SoftAssertions.assertAll(SoftAssertions.java:158)
+	at com.amazon.stepdefinitions.LoginStepDefinitions.Verify_page_title(LoginStepDefinitions.java:40)
+	at ✽.Then Verify page title(/Users/test/Desktop/WPOS_Automation/Demo_amazon/src/test/resources/Features/LoginAmaz.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="Amazon Login" name="Successful Login" time="14.858882">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id='ap_password']&quot;}&#10;  (Session info: chrome=78.0.3904.97)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'&#10;System info: host: 'WUK5017466-M.local', ip: '172.19.2.119', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_151'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /var/folders/lp/lvwlcmvj1zb...}, goog:chromeOptions: {debuggerAddress: localhost:62737}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: a9b4b65267d7881468522be387f3f6e0&#10;*** Element info: {Using=xpath, value=//input[@id='ap_password']}&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:328)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:446)&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:320)&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)&#10;&#9;at com.sun.proxy.$Proxy22.sendKeys(Unknown Source)&#10;&#9;at com.amazon.stepdefinitions.LoginStepDefinitions.user_enter_password(LoginStepDefinitions.java:83)&#10;&#9;at ✽.And user enter password &quot;&quot;(/Users/test/Desktop/WPOS_Automation/Demo_amazon/src/test/resources/Features/LoginAmaz.feature:17)&#10;"><![CDATA[Given The user is on the website page.......................................passed
+When user clicks on the Login button........................................passed
+And user enter email "t.....com"............................................passed
+And clicks on continue......................................................passed
+And user enter password ""..................................................failed
+And user click on Login.....................................................skipped
+Then user should be logged into the application.............................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='ap_password']"}
+  (Session info: chrome=78.0.3904.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'WUK5017466-M.local', ip: '172.19.2.119', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.97, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /var/folders/lp/lvwlcmvj1zb...}, goog:chromeOptions: {debuggerAddress: localhost:62737}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a9b4b65267d7881468522be387f3f6e0
+*** Element info: {Using=xpath, value=//input[@id='ap_password']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:328)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:446)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:320)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy22.sendKeys(Unknown Source)
+	at com.amazon.stepdefinitions.LoginStepDefinitions.user_enter_password(LoginStepDefinitions.java:83)
+	at ✽.And user enter password ""(/Users/test/Desktop/WPOS_Automation/Demo_amazon/src/test/resources/Features/LoginAmaz.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="Amazon Login" name="Successful Login 2" time="6.375304">
+<system-out><![CDATA[Given The user is on the website page.......................................passed
+When user clicks on the Login button........................................passed
+And user enter email "trideepmukherjee914@gmail.com"........................passed
+And clicks on continue......................................................passed
+And user enter password "Trid@".............................................passed
+And user click on Login.....................................................passed
+Then user should be logged into the application.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Login" name="Successful Login 3" time="6.393572">
+<system-out><![CDATA[Given The user is on the website page.......................................passed
+When user clicks on the Login button........................................passed
+And user enter email "trideepmukherjee914@gmail.com"........................passed
+And clicks on continue......................................................passed
+And user enter password "Trid@1992".........................................passed
+And user click on Login.....................................................passed
+Then user should be logged into the application.............................passed
+]]></system-out>
+</testcase>
+</testsuite>

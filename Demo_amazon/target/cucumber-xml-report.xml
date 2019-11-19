@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="19.477089">
+<testcase classname="Search item" name="Search an item" time="19.477089">
+<system-out><![CDATA[Given user is on Home page..................................................passed
+When user enter "one plus 7"................................................passed
+And user select on third option from the list...............................passed
+Then user should navigates to item detail page..............................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,1 @@
+/Users/test/Desktop/WPOS_Automation/Demo_amazon/src/test/resources/Features/LoginAmaz.feature:6:23
